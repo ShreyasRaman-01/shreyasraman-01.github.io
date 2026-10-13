@@ -108,9 +108,18 @@ p {
 }
 
 .recent-news-section li{
+  display: flex;
+  align-items: baseline;
+  gap: 1.5rem;
   font-size: 18px;
   margin: 20px 0;
   padding: 0 3.2rem;
+}
+
+.news-date {
+  flex: 0 0 8rem;
+  font-weight: 600;
+  color: #555;
 }
 
 .about-card p {

@@ -134,13 +134,32 @@ class AboutCard extends Component {
 
       {/* finally add recent news in the bottom */}
       <div className="recent-news-section">
-        <h2>Recent News</h2>
+        <h2>News</h2>
         <ul>
-          <li>Started Day 1 as an E2E Autonomous Driving team at Nuro!</li>
-          <li>Reviewing for 2nd ever <a href="https://leap-workshop.github.io/" style={{color:"black", textDecoration:"none"}}>LEAP Workshop at CoRL 2024</a>!</li>
-          <li>My paper <a href="https://openreview.net/pdf?id=5z8AJP5G8c" style={{color:"black", textDecoration:"none"}}>SkillWrapper</a> was accepted at LEAP, CoRL 2024</li>
-          <li>Spending Winter 2023 at McKinsey & Co, developing a B2B AI Strategy </li>
-          <li>Graduated ScB CS (Honors) with Magna-cum-laude & <a href="https://awards.cs.brown.edu/2024/05/06/twenty-eight-students-win-2024-brown-cs-senior-prizes/" style={{color:"black", textDecoration:"none"}}>Senior Prize</a> at Brown University</li>
+          <li>
+            <span className="news-date">Oct 2025</span>
+            <span>Started Day 1 as an E2E Autonomous Driving team at Nuro!</span>
+          </li>
+          <li>
+            <span className="news-date">May 2025</span>
+            <span>Graduated ScB CS (Honors) with Magna-cum-laude & <a href="https://awards.cs.brown.edu/2024/05/06/twenty-eight-students-win-2024-brown-cs-senior-prizes/" style={{color:"black", textDecoration:"none"}}>Senior Prize</a> at Brown University</span>
+          </li>
+          <li>
+            <span className="news-date">Nov 2024</span>
+            <span><a href="https://openreview.net/pdf?id=5z8AJP5G8c" style={{color:"black", textDecoration:"none"}}>SkillWrapper</a> was accepted at LEAP, CoRL 2024</span>
+          </li>
+          <li>
+            <span className="news-date">Oct 2024</span>
+            <span>Reviewing for 2nd ever <a href="https://leap-workshop.github.io/" style={{color:"black", textDecoration:"none"}}>LEAP Workshop at CoRL 2024</a>!</span>
+          </li>
+          <li>
+            <span className="news-date">May 2024</span>
+            <span>Received ScB CS (Honors) with Magna-cum-laude & <a href="https://awards.cs.brown.edu/2024/05/06/twenty-eight-students-win-2024-brown-cs-senior-prizes/" style={{color:"black", textDecoration:"none"}}>Senior Prize</a> at Brown University</span>
+          </li>
+          <li>
+            <span className="news-date">Nov 2023</span>
+            <span>At McKinsey & Co, developing a B2B AI Strategy </span>
+          </li>
         </ul>
       </div>
       </div>
