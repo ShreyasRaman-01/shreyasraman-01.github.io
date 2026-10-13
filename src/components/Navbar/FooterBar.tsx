@@ -13,7 +13,7 @@ class FooterBar extends Component {
       
         <div className={styles.footerBarContainer}>
 
-        <p className={styles.footerText}> Designed with ❤️ by Shreyas Raman © 2024-2025 </p>
+        <p className={styles.footerText}> Designed with ❤️ by Shreyas Raman © 2026-2028 </p>
 
         </div>
     );

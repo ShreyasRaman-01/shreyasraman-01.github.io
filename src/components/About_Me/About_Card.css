@@ -1,26 +1,35 @@
-.about-card-container::before {
+@keyframes gear-spin { to { transform: rotate(1turn); } }
+
+.about-card-container::before,
+.about-card-container::after {
+  --gear: url("data:image/svg+xml,<svg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 100 100'><g fill='none' stroke='white' stroke-width='2.2' stroke-linejoin='round'><path d='M51.7,18L59,3.9L76.3,11L71.4,26.2L73.8,28.6L89,23.7L96.1,41L82,48.3L82,51.7L96.1,59L89,76.3L73.8,71.4L71.4,73.8L76.3,89L59,96.1L51.7,82L48.3,82L41,96.1L23.7,89L28.6,73.8L26.2,71.4L11,76.3L3.9,59L18,51.7L18,48.3L3.9,41L11,23.7L26.2,28.6L28.6,26.2L23.7,11L41,3.9L48.3,18Z'/><circle cx='50' cy='50' r='13'/></g></svg>");
   content: "";
-  height: 650px;
-  width: 100vw;
-  top: 0;
-  left: 0;
   position: absolute;
-  background: linear-gradient(#f01, #0096ff);
-  clip-path: circle(22% at right 60%);
+  width: 28rem;
+  height: 28rem;
   z-index: -2;
+  pointer-events: none;
+  background: linear-gradient(#f01, #0096ff);
+  -webkit-mask: var(--gear) center / contain no-repeat;
+  mask: var(--gear) center / contain no-repeat;
+  animation: gear-spin linear both;
+  animation-timeline: view();
 }
 
-.about-card-container::after {
-  content: "";
-  height: 60vh;
-  width: 100vw;
-  top: 0;
-  left: 0;
+.about-card-container::before { top: 4rem; right: -14rem; }
 
-  position: absolute;
+.about-card-container::after {
+  top: 14rem;
+  left: -11rem;
+  width: 22rem;
+  height: 22rem;
   background: linear-gradient(#21a6f3, #fd2f73);
-  clip-path: circle(20% at left 48%);
-  z-index: -2;
+  animation-direction: reverse;
+}
+
+@media (prefers-reduced-motion: reduce) {
+  .about-card-container::before,
+  .about-card-container::after { animation: none; }
 }
 
 .about-header {
