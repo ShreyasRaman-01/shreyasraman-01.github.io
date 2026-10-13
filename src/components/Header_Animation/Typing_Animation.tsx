@@ -9,7 +9,7 @@ const TypeAnimation = () => {
     <div className="typing-animation">
       <div className="typing-text">
         <div className="static-text">
-          I&nbsp;
+          I am &nbsp;
           <Typewriter
             options={{
               autoStart: true,
@@ -17,13 +17,13 @@ const TypeAnimation = () => {
               delay: 70,
 
               strings: [
-                "❤️ multimodal AI",
-                "am a machine learning researcher",
-                "like tinkering with robots 🤖",
-                "enjoy software development",
-                "am an avid chess player ♟️",
-                "play the guitar 🎸",
-                "enjoy writing poetry 🖋️",
+                "an embodied AI + robotics researcher 🤖",
+                "obsessed with multimodal representation learning 🧠",
+                "an engineer and tinkerer ⚙️",
+                "a professional chess player ♟️",
+                "a song-producing guitarist 🎸",
+                "a poet 🖋️",
+                "a martial artist 🥊",
                 "",
               ],
             }}

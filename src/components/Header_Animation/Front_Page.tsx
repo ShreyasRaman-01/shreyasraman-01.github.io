@@ -108,7 +108,7 @@ const FrontPage = () => {
 
       {/* div containing main fade-in text on home page */}
       <div className="home-text">
-        <h1 className="bold-title-1">Hi, I'm Shreyas Raman</h1>
+        <h1 className="bold-title-1">Hey 👋 I'm Shreyas Raman</h1>
       </div>
 
       <TypeAnimation />

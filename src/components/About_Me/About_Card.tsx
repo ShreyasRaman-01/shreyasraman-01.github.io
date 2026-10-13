@@ -26,24 +26,29 @@ class AboutCard extends Component {
     <ul>
       <li>
         {" "}
-        Welcome to my personal website! My name is Shreyas Raman{" "}
+        Welcome to my corner of the internet! My name is Shreyas Raman{" "}
       </li>
       <li>
         {" "}
-        I graduted from Brown University with an <b>ScB & MSc (Honors) in Computer Science</b>, grateful to do <Link to="/research">research</Link> with the BigAI initiative under <b><a href="https://h2r.cs.brown.edu/people/" style={{color:"black", textDecoration:"none"}}>Prof. Stefanie Tellex</a></b> and <b><a href="https://cs.brown.edu/people/gdk/index.html" style={{color:"black", textDecoration:"none"}}>Prof. George Konidaris</a></b>, as well as <b><a href="https://randallbalestriero.github.io/" style={{color:"black", textDecoration:"none"}}>Prof. Randall Balestriero</a></b> and <b><a href="https://serre-lab.clps.brown.edu/person/thomas-serre/" style={{color:"black", textDecoration:"none"}}>Prof. Thomas Serre</a></b>
+        I am a Software Engineer (ML) at <a href="https://www.nuro.ai/nuro-lucid-uber-robotaxi" Nuro></a> working on learning useful representations for End-to-End Autonomous Driving
         {" "}
       </li>
       <li>
-        {" "}
-        My research focus towards a PhD is on <b>enhancing embodied AI</b> by learning <b>composable abstractions of multimodal observations</b> (vision, audio, language, haptic etc...){" "}
+      {" "}
+        Previously, I finsihed a 5-year <b>ScB & MSc (Honors) in Computer Science</b> at  Brown University  <Link to="/research">doing research</Link> with the BigAI initiative under <b><a href="https://h2r.cs.brown.edu/people/" style={{color:"black", textDecoration:"none"}}>Prof. Stefanie Tellex</a></b> and <b><a href="https://cs.brown.edu/people/gdk/index.html" style={{color:"black", textDecoration:"none"}}>Prof. George Konidaris</a></b>, <b><a href="https://randallbalestriero.github.io/" style={{color:"black", textDecoration:"none"}}>Prof. Randall Balestriero</a></b> as well as <b><a href="https://serre-lab.clps.brown.edu/person/thomas-serre/" style={{color:"black", textDecoration:"none"}}>Prof. Thomas Serre</a></b>
+      {" "}
       </li>
       <li>
         {" "}
-        Outside research, I like: competitive <a href="https://chess.com/member/shreyasraman" style={{color:"black", textDecoration:"none"}}>chess ♚</a>, <a href="https://www.goodreads.com/user/show/185687235-shreyas-raman" style={{color:"black", textDecoration:"none"}}>reading 📚</a>, boxing 🥊, mentorship 🧑‍🏫, <a href="https://medium.com/@shreyas_sundara_raman" style={{color:"black", textDecoration:"none"}}>poetry</a> 🖊️, guitar 🎸 and technical <Link to="/projects">projects</Link>{" "}
+        I am obsessed with the problem of <b>learning composable abstractions for effective/general embodied decision making</b> from <b>multimodal observations</b> (vision, audio, language, haptic etc...). To hear more about my thoughts on this problem, checkout my <a href="https://medium.com/@shreyas_sundara_raman" blog post> </a>{" "}
       </li>
       <li>
         {" "}
-        If you'd like to <b>know more about me or reach out</b>, please use the social links above or use my <a href="https://medium.com/@shreyas_sundara_raman" style={{color:"black", textDecoration:"none"}}>blog</a>{" "}
+        Outside research, I pursue representation learning  <Link to="/research">research</Link>{" "}, play competitive <a href="https://chess.com/member/shreyasraman" style={{color:"black", textDecoration:"none"}}>chess ♚</a>, actively review <a href="https://www.goodreads.com/user/show/185687235-shreyas-raman" style={{color:"black", textDecoration:"none"}}>books 📚 and films 🎬</a>, am an amateur boxer 🥊, write <a href="https://medium.com/@shreyas_sundara_raman" style={{color:"black", textDecoration:"none"}}>poetry</a> 🖊️, write music on my guitar 🎸 and tinker with technical <Link to="/projects">projects</Link>{" "}
+      </li>
+      <li>
+        {" "}
+        Please feel <b>reach out</b>, please use the social links above! To know more about me, please checkout my <a href="https://medium.com/@shreyas_sundara_raman" style={{color:"black", textDecoration:"none"}}>blog</a>{" "}
       </li>
     </ul>
   );
@@ -52,17 +57,17 @@ class AboutCard extends Component {
   about_me_long_content = (
     <p style={clicked_paragraph_style}>
       {" "}
-      Hey there, welcome to my personal website! My name is Shreyas Raman. I graduated with ScB & MSc (Honors) in Computer Science at Brown University<br />
-      <br /> I am a <b>researcher and roboticist</b> currently pursuing a PhD, eager
-      to enable human-like reasoning and better composable abstractions for autonomous agents using multimodal AI e.g. across visual, audio, language or haptic data. Though I always enjoyed
+      Hello fellow netizen (or AI agent), welcome to my corner of the web! My name is Shreyas Raman. I graduated with ScB & MSc (Honors) in Computer Science at Brown University<br />
+      <br /> I am a <b>researcher and roboticist</b> at heart, eager
+      to enable human-like reasoning for embodied AI through composable abstraction learning from multiple modalities e.g. across visual, audio, language or haptic data. Though I always enjoyed
       physics/engineering, in my first semester at Brown University, I{" "}
       <b>fell in love with a completely new world of computer science.</b>
-      <br /> Over undergrad, my <Link to="/research" style={{color:"black", textDecoration:"none"}}>research experience</Link> across 9 projects accepted at 6 conferences has cultivated a{" "}
+      <br /> Over undergrad, my <Link to="/research" style={{color:"black", textDecoration:"none"}}>research experience</Link> across 9 research projects accepted at 6 conferences has cultivated a{" "}
       <b>strong passion for multimodal AI (computer vision, natural language processing or reinforcement learning) applied to help agents/robots improve generalization to novel tasks, thereby making agents meaningfully independent and simplifying human-agent interactions.</b> Several interesting <Link to="/projects" style={{color:"black", textDecoration:"none"}}>projects</Link> over this time have also made me familiar with <b>Python, Java, MATLAB, Solidity, Go and C</b>{" "}
       and am self-taught in <b>SQL, HTML, Javascript and Typescript</b>. Please check them out!{" "}
-      <br /> Aside from research, I am actively involved in{" "}
+      <br /> Aside from research, I was actively involved in{" "}
       <b>Brown's Chess club</b>; I supported the{" "}
-      <b>"Brown Space Engineering" (BSE)</b> group with CubeSAT missions; I served as a <b>head TA for CSCI1410</b>, <b>Meiklejohn</b> peer mentor and <b>tutor to local highschool students</b> in Providence; I also dabble in <Link to="/blog" style={{color:"black", textDecoration:"none"}}><b>creative writing + poetry</b></Link>. I am keen to leverage my unique background to bridge my work beyond theory towards tangible impact.{" "}
+      <b>"Brown Space Engineering" (BSE)</b> group with CubeSAT missions; I served as a <b>head TA for CSCI1410</b>, <b>Meiklejohn</b> peer mentor and <b>tutor to local highschool students</b> in Providence; I also dabble in <Link to="/blog" style={{color:"black", textDecoration:"none"}}><b>creative writing + poetry</b></Link> and music writing. I am keen to leverage my unique background to bridge my work beyond theory towards tangible impact.{" "}
     </p>
   );
 
@@ -113,10 +118,13 @@ class AboutCard extends Component {
                 I have lived in 5 countries and can speak 6 languages
               </li>
               <li>
-                I know too many animal facts!
+                I have been to Mt. Everest's peak...by plane 😅
               </li>
               <li> 
-                I love German Shepherd dogs 🐶
+                I am fanatic about dogs: my fav breed is German Shepherds 🐶
+              </li>
+              <li>
+                I mainly study the Sicilian and Danish gambit
               </li>
             </ul>
             </div>
@@ -128,7 +136,7 @@ class AboutCard extends Component {
       <div className="recent-news-section">
         <h2>Recent News</h2>
         <ul>
-          <li>Applied to PhD programs in the 2025 cycle! Looking forward to results 🤞</li>
+          <li>Started Day 1 as an E2E Autonomous Driving team at Nuro!</li>
           <li>Reviewing for 2nd ever <a href="https://leap-workshop.github.io/" style={{color:"black", textDecoration:"none"}}>LEAP Workshop at CoRL 2024</a>!</li>
           <li>My paper <a href="https://openreview.net/pdf?id=5z8AJP5G8c" style={{color:"black", textDecoration:"none"}}>SkillWrapper</a> was accepted at LEAP, CoRL 2024</li>
           <li>Spending Winter 2023 at McKinsey & Co, developing a B2B AI Strategy </li>
