@@ -77,7 +77,7 @@
 /* menu items when the menu button is not clicked: offset menu items to the right*/
 .nav-menu {
   display: grid;
-  grid-template-columns: repeat(6, auto);
+  grid-template-columns: repeat(7, auto);
   /* grid-gap: 35px; */
   list-style: none;
   text-align: center;

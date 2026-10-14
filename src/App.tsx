@@ -7,6 +7,7 @@ import Projects from "./components/Projects";
 import FrontPage from "./components/Header_Animation/Front_Page";
 import AboutCard from "./components/About_Me/About_Card";
 import Skills from "./components/Skills";
+import Room from "./components/Room";
 // import Blog from "./components/Blog_Post";
 import Research from "./components/Research";
 import WorkExperience from "./components/Work_Experiences";
@@ -54,6 +55,9 @@ function App() {
           </Route>
           <Route path="/skills">
             <Skills />
+          </Route>
+          <Route path="/room">
+            <Room />
           </Route>
 
           <Route>
