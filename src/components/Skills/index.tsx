@@ -58,13 +58,13 @@ const Skills = () => {
             <MLBrain />
           </span>
 
-          <h2 className={styles.title}>Embodied Multimodal AI</h2>
+          <h2 className={styles.title}>Representation Learning for Embodied Multimodal AI</h2>
 
           <div className={styles.section}>
             <h3 className={styles.sectionTitle}>Problems I like tackling:</h3>
 
             <span className={styles.subsetValues}>
-              Skill Learning, Causal Reasoning, Planning, Object Segmentation, Multimodal Representations
+              Skill Learning, Causal Reasoning, Planning, Object Segmentation, Multimodal Representations, Dynamics Learning
             </span>
           </div>
 
@@ -75,10 +75,11 @@ const Skills = () => {
               <li className={styles.toolListItem}>Computer Vision</li>
               <li className={styles.toolListItem}>Reinforcement Learning</li>
               <li className={styles.toolListItem}> Natural Language Processing (NLP)</li>
-              <li className={styles.toolListItem}>Deep Learning</li>
               <li className={styles.toolListItem}>Foundation Models (LLMs & VLMs)</li>
-              <li className={styles.toolListItem}>Halfspaces</li>
-              <li className={styles.toolListItem}>Logistic Regression</li>
+              <li className={styles.toolListItem}>World Modelling</li>
+              <li className={styles.toolListItem}>Self-Supervised Learning</li>
+              <li className={styles.toolListItem}>Action-Chunking</li>
+              <li className={styles.toolListItem}>World Action Models</li>
             </ul>
           </div>
         </div>
@@ -93,7 +94,7 @@ const Skills = () => {
             <h3 className={styles.sectionTitle}>Problems I like tackling:</h3>
 
             <span className={styles.subsetValues}>
-              Localization, Mapping, Mobile Manipulation, Navigation, Optical Flow, Hardware Projects
+              Policy Diffusion, Localization, Mapping, Mobile Manipulation, Navigation, Optical Flow, Hardware Projects
             </span>
           </div>
 
