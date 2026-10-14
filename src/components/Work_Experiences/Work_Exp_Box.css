@@ -48,8 +48,9 @@
 .work-exp-box img {
   height: 9vh;
   align-self: left;
-  padding-left: 2%;
-  padding-top: 1%;
+  margin-left: 2%;
+  margin-top: 1%;
+  border-radius: 0.8rem;
 }
 
 .work-exp-packages {

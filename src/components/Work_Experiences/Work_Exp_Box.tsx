@@ -15,8 +15,8 @@ interface Props {
   filters: Array<Filters>;
   icon: string;
   alt_icon_name: string;
-  name: string;
-  description: Array<string>;
+  name: React.ReactNode;
+  description: Array<React.ReactNode>;
   position_and_dates: string
 }
 

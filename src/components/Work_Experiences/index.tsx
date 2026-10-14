@@ -5,8 +5,8 @@ interface WorkExperience{
   icon_path: string;
   alt_name:string;
   position_and_dates: string;
-  name: string;
-  bulletpoints: Array<string>;
+  name: React.ReactNode;
+  bulletpoints: Array<React.ReactNode>;
   language: Array<Filters>;
 }
 
@@ -55,13 +55,28 @@ const FILTERS: Array<Filters> = [
   },
   {
     id: 8,
-    name: "Consulting",
+    name: "AI Consulting",
     color: "#003970",
   },
   {
     id: 9,
     name: "Robotics",
     color: "#9619C9",
+  },
+  {
+    id: 10,
+    name: "C++",
+    color: "#00599C",
+  },
+  {
+    id: 11,
+    name: "PyTorch",
+    color: "#EE4C2C",
+  },
+  {
+    id: 12,
+    name: "TensorFlow",
+    color: "#FF6F00",
   }
 
 ];
@@ -69,43 +84,80 @@ const FILTERS: Array<Filters> = [
 
 const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
   {
-    icon_path: "media/corl2024_icon.png",
-    alt_name: "LEAP @ CoRL 2024",
-    position_and_dates: "Reviewer [Fall 2024]",
-    name: "LEAP @ CoRL 2024",
-    bulletpoints: ["Requested to review papers for LEAP at CoRL 2024"],
-    language: [FILTERS[6], FILTERS[9]]
+    icon_path: "media/nuro_icon.png",
+    alt_name: "Nuro",
+    position_and_dates: "Software Engineer, ML - Representation Learning [Fall 2025 - Now]",
+    name: <a href="https://www.nuro.ai/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Nuro</a>,
+    bulletpoints: [
+      <>
+        Learned driving representations that transfer and scale — cross-attention, closed-loop training, cross-platform transfer, auxiliary tasks, and large-scale curricula — for the <a href="https://www.nuro.ai/nuro-lucid-uber-robotaxi" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Nuro-Uber-Lucid robotaxi deployment</a>.
+      </>,
+      "Unblocked 2.5× training on harder scenes: 30% more nudges around unmapped vehicles and debris, and 15% better occlusion creeping."
+    ],
+    language: [FILTERS[0], FILTERS[10], FILTERS[11], FILTERS[12], FILTERS[9]]
+  },
+  {
+    icon_path: "media/irl_icon.png",
+    alt_name: "Intelligent Robot Lab",
+    position_and_dates: "Research Engineer, Robot & Representation Learning [2023 - 2025]",
+    name: <a href="http://irl.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Intelligent Robot Lab, Brown</a>,
+    bulletpoints: [
+      <>
+        <a href="https://openreview.net/pdf?id=5z8AJP5G8c" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Symbolic skill abstraction</a> (co-first author, LEAP @ CoRL 2024, best poster ICRA 2025): learned skill descriptions from vision, reaching 75% success, within 6% of an expert, on SPOT and Franka.
+      </>,
+      "Factorized representations (first author): separated factors that matter for decisions, giving policies 30% more generalizable than DreamerV2 and 3× faster training."
+    ],
+    language: [FILTERS[0], FILTERS[10], FILTERS[11], FILTERS[9]]
   },
   {
     icon_path: "media/mck_icon.jpeg",
     alt_name: "McKinsey & Co",
     position_and_dates: "Business Analyst Intern [Winter 2023/2024]",
     name: "McKinsey & Co.",
-    bulletpoints: ["Defined an AI vision, strategy and supporting operating model (supported by best-practices) for the B2B division of a large Telco in the MENA region"],
+    bulletpoints: ["Set the AI strategy and operating model for the B2B arm of the largest telecom in MENA, valued at $2B."],
     language: [FILTERS[8]]
   },
   {
-    icon_path: "media/icra2024_icon.png",
-    alt_name: "ICRA 2024",
-    position_and_dates: "Reviewer [Fall 2023]",
-    name: "ICRA 2024",
-    bulletpoints: ["Requested to review multiple papers for ICRA 2024", "Peformed a literature review and provided thorough feedback + points-of-improvement to authors"],
-    language: [FILTERS[6], FILTERS[9]]
+    icon_path: "media/brown_icon.png",
+    alt_name: "Humans-to-Robots Lab",
+    position_and_dates: "Research Engineer, Vision-Language Reasoning & Planning [2022 - 2024]",
+    name: <a href="https://h2r.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Humans-to-Robots Lab, Brown</a>,
+    bulletpoints: [
+      <>
+        <a href="https://ieeexplore.ieee.org/document/10611376" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>CAPE</a> (first author, oral ICRA 2024, 250+ citations): a planner that repairs its own failed preconditions from language feedback — 10× fewer interventions, 20% more correct, and 100× faster than SayCan.
+      </>,
+      <>
+        <a href="https://ieeexplore.ieee.org/document/10611447" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Safety Chip</a> (second author, oral ICRA 2024, 150+ citations): turned open-ended language rules into LTL constraints, so SPOT followed them 15–40% more reliably.
+      </>
+    ],
+    language: [FILTERS[0], FILTERS[9]]
+  },
+  {
+    icon_path: "media/bigai_icon.png",
+    alt_name: "BigAI",
+    position_and_dates: "Reinforcement Learning Research Engineer [2023 - 2024]",
+    name: <a href="https://www.littmania.com/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>BigAI, Brown</a>,
+    bulletpoints: [
+      <>
+        <a href="https://openreview.net/pdf?id=tSFkQGu0HA" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Tiered Reward</a> (RLC 2024): an environment-independent reward that still guarantees goal visits, converging 3× faster than standard reward shaping across 500+ MiniGrid runs.
+      </>
+    ],
+    language: [FILTERS[0], FILTERS[11]]
   },
   {
     icon_path: "media/brown_icon.png",
     alt_name: "CS1410 HTA",
     position_and_dates: "Head Teaching Assistant [Fall 2022]",
     name: "Artificial Intelligence Course, CS1410",
-    bulletpoints: ["Working with Prof. George Konidaris to improve course content to improve course content and automate assigment grading + logistics", "Supporting 120+ students overall, leading 20+ TA staff and mentoring 10+ students on final projects"],
-    language: [FILTERS[0], FILTERS[1]]
+    bulletpoints: ["Head TA with Prof. George Konidaris, leading 20 TAs for 120+ students.", "Automated grading and logistics, and mentored 10+ final projects."],
+    language: [FILTERS[0], FILTERS[1], FILTERS[11], FILTERS[12]]
   },
   {
     icon_path: "media/wisdomise_icon.jpeg",
     alt_name: "Wisdomise",
     position_and_dates: "Machine Learning Engineer [Summer 2022]",
     name: "Wisdomise",
-    bulletpoints: ["Optimizing Liquidity Provision on UniswapV3 using ML techiniques", "Predicted high and low tick bounds with accuracy of >95% and utility of >98%"],
+    bulletpoints: ["Used ML to set Uniswap v3 liquidity ranges, predicting tick bounds at >95% accuracy and >98% utility."],
     language: [FILTERS[0], FILTERS[3], FILTERS[2], FILTERS[7], FILTERS[5]]
   },
   {
@@ -113,7 +165,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
     alt_name: "Rario",
     position_and_dates: "Blockchain Developer [Summer 2022]",
     name: "Rario",
-    bulletpoints: ["Develop a P2P (web-3) Messaging Platform for chat and NFT exchanges", "Used smart contracts to manage platform backend and deployed on Polygon (Mumbai) mainnet"],
+    bulletpoints: ["Built a peer-to-peer chat and NFT exchange, with the backend in smart contracts on Polygon."],
     language: [FILTERS[3], FILTERS[2], FILTERS[7]]
   },
   {
@@ -121,8 +173,8 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
     alt_name: "DATA1030 TA",
     position_and_dates: "Teaching Assistant [Fall 2020]",
     name: "Hands-on Data Science, DATA1030 (Graduate Level)",
-    bulletpoints: ["Worked under Prof. Andras Zsom to support 50+ students with virtual TA hours and grading", "Mentored 14 graduate students on using ML and data science techniques for final projects"],
-    language: [FILTERS[0]]
+    bulletpoints: ["Supported 50+ students under Prof. Andras Zsom, and mentored 14 graduate students on ML final projects."],
+    language: [FILTERS[0], FILTERS[12]]
   }
   
   
@@ -133,7 +185,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
 
 const Projects = () => (
   <div className={styles.container}>
-    <h2 className={styles.projectsTitle}>Work Experience</h2>
+    <h2 className={styles.projectsTitle}>Engineering Experience</h2>
 
     {Array.from(WORK_EXPERIENCE_DETAILS.keys()).map((val, index) => (
       <WorkExpBox key={index} filters={WORK_EXPERIENCE_DETAILS[val].language} icon={WORK_EXPERIENCE_DETAILS[val].icon_path} alt_icon_name = {WORK_EXPERIENCE_DETAILS[val].alt_name} position_and_dates = {WORK_EXPERIENCE_DETAILS[val].position_and_dates} name = {WORK_EXPERIENCE_DETAILS[val].name} description = {WORK_EXPERIENCE_DETAILS[val].bulletpoints}/>
