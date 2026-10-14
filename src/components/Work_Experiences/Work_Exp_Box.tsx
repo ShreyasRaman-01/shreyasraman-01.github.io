@@ -17,12 +17,13 @@ interface Props {
   alt_icon_name: string;
   name: React.ReactNode;
   description: Array<React.ReactNode>;
-  position_and_dates: string
+  position_and_dates: string;
+  round_icon?: boolean;
 }
 
 
 //Project Box class containing all the elements for a single project box
-const WorkExpBox: React.FC<Props> = ({ filters, icon, alt_icon_name, name, description, position_and_dates}) => {
+const WorkExpBox: React.FC<Props> = ({ filters, icon, alt_icon_name, name, description, position_and_dates, round_icon}) => {
   // const [selectedPackages, setPackages] = useState<Array<Filters>>([]);
   const [selectedFilters, setFilters] = useState<Array<Filters>>([]);
 
@@ -49,7 +50,7 @@ const WorkExpBox: React.FC<Props> = ({ filters, icon, alt_icon_name, name, descr
     //div containing the project box
     <div className="work-exp-box">
       <div className="header">
-        <img src={icon} alt={alt_icon_name} />
+        <img src={icon} alt={alt_icon_name} className={round_icon ? "icon-rounded" : undefined} />
         <h3>
           <span className="title">{name}</span>
           <span className="subtitle">{position_and_dates}</span>

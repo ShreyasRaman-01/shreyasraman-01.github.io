@@ -8,6 +8,7 @@ interface WorkExperience{
   name: React.ReactNode;
   bulletpoints: Array<React.ReactNode>;
   language: Array<Filters>;
+  round_icon?: boolean;
 }
 
 
@@ -86,6 +87,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
   {
     icon_path: "media/nuro_icon.png",
     alt_name: "Nuro",
+    round_icon: true,
     position_and_dates: "Software Engineer, ML - Representation Learning [Fall 2025 - Now]",
     name: <a href="https://www.nuro.ai/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Nuro</a>,
     bulletpoints: [
@@ -100,7 +102,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
     icon_path: "media/irl_icon.png",
     alt_name: "Intelligent Robot Lab",
     position_and_dates: "Research Engineer, Robot & Representation Learning [2023 - 2025]",
-    name: <a href="http://irl.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Intelligent Robot Lab, Brown</a>,
+    name: <a href="http://irl.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Intelligent Robot Lab</a>,
     bulletpoints: [
       <>
         <a href="https://openreview.net/pdf?id=5z8AJP5G8c" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Symbolic skill abstraction</a> (co-first author, LEAP @ CoRL 2024, best poster ICRA 2025): learned skill descriptions from vision, reaching 75% success, within 6% of an expert, on SPOT and Franka.
@@ -112,6 +114,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
   {
     icon_path: "media/mck_icon.jpeg",
     alt_name: "McKinsey & Co",
+    round_icon: true,
     position_and_dates: "Business Analyst Intern [Winter 2023/2024]",
     name: "McKinsey & Co.",
     bulletpoints: ["Set the AI strategy and operating model for the B2B arm of the largest telecom in MENA, valued at $2B."],
@@ -121,7 +124,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
     icon_path: "media/brown_icon.png",
     alt_name: "Humans-to-Robots Lab",
     position_and_dates: "Research Engineer, Vision-Language Reasoning & Planning [2022 - 2024]",
-    name: <a href="https://h2r.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Humans-to-Robots Lab, Brown</a>,
+    name: <a href="https://h2r.cs.brown.edu/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Humans-to-Robots Lab</a>,
     bulletpoints: [
       <>
         <a href="https://ieeexplore.ieee.org/document/10611376" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>CAPE</a> (first author, oral ICRA 2024, 250+ citations): a planner that repairs its own failed preconditions from language feedback — 10× fewer interventions, 20% more correct, and 100× faster than SayCan.
@@ -136,7 +139,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
     icon_path: "media/bigai_icon.png",
     alt_name: "BigAI",
     position_and_dates: "Reinforcement Learning Research Engineer [2023 - 2024]",
-    name: <a href="https://www.littmania.com/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>BigAI, Brown</a>,
+    name: <a href="https://www.littmania.com/" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>BigAI</a>,
     bulletpoints: [
       <>
         <a href="https://openreview.net/pdf?id=tSFkQGu0HA" target="_blank" rel="noreferrer" style={{color:"black", textDecoration:"none"}}>Tiered Reward</a> (RLC 2024): an environment-independent reward that still guarantees goal visits, converging 3× faster than standard reward shaping across 500+ MiniGrid runs.
@@ -155,6 +158,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
   {
     icon_path: "media/wisdomise_icon.jpeg",
     alt_name: "Wisdomise",
+    round_icon: true,
     position_and_dates: "Machine Learning Engineer [Summer 2022]",
     name: "Wisdomise",
     bulletpoints: ["Used ML to set Uniswap v3 liquidity ranges, predicting tick bounds at >95% accuracy and >98% utility."],
@@ -163,6 +167,7 @@ const WORK_EXPERIENCE_DETAILS:  Array<WorkExperience> = [
   {
     icon_path: "media/rario_icon.jpeg",
     alt_name: "Rario",
+    round_icon: true,
     position_and_dates: "Blockchain Developer [Summer 2022]",
     name: "Rario",
     bulletpoints: ["Built a peer-to-peer chat and NFT exchange, with the backend in smart contracts on Polygon."],
@@ -188,7 +193,7 @@ const Projects = () => (
     <h2 className={styles.projectsTitle}>Engineering Experience</h2>
 
     {Array.from(WORK_EXPERIENCE_DETAILS.keys()).map((val, index) => (
-      <WorkExpBox key={index} filters={WORK_EXPERIENCE_DETAILS[val].language} icon={WORK_EXPERIENCE_DETAILS[val].icon_path} alt_icon_name = {WORK_EXPERIENCE_DETAILS[val].alt_name} position_and_dates = {WORK_EXPERIENCE_DETAILS[val].position_and_dates} name = {WORK_EXPERIENCE_DETAILS[val].name} description = {WORK_EXPERIENCE_DETAILS[val].bulletpoints}/>
+      <WorkExpBox key={index} filters={WORK_EXPERIENCE_DETAILS[val].language} icon={WORK_EXPERIENCE_DETAILS[val].icon_path} alt_icon_name = {WORK_EXPERIENCE_DETAILS[val].alt_name} position_and_dates = {WORK_EXPERIENCE_DETAILS[val].position_and_dates} name = {WORK_EXPERIENCE_DETAILS[val].name} description = {WORK_EXPERIENCE_DETAILS[val].bulletpoints} round_icon={WORK_EXPERIENCE_DETAILS[val].round_icon}/>
     ))}
 
 

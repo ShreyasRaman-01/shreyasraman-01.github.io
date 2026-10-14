@@ -53,6 +53,15 @@
   border-radius: 0.8rem;
 }
 
+.work-exp-box img.icon-rounded {
+  width: 9vh;
+  height: 9vh;
+  padding: 0;
+  object-fit: cover;
+  flex-shrink: 0;
+  border-radius: 2rem;
+}
+
 .work-exp-packages {
   padding: 1.6rem;
   border-bottom-left-radius: 2rem;
