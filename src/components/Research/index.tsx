@@ -11,6 +11,10 @@ interface ResearchDetails{
   github_link: string;
   submission_links: Array<LinkFilters>;
   topics_and_libraries: Array<Filters>;
+  aside_path?: string;
+  aside_alt?: string;
+  icon_drop?: number;
+  icon_scale?: number;
 }
 
 const TOPICS_LIBRARIES: Array<Filters> = [
@@ -233,6 +237,11 @@ const TOPICS_LIBRARIES: Array<Filters> = [
     id: 40,
     name: "TransformerLens",
     color: "#E6EAEA"
+  },
+  {
+    id: 41,
+    name: "Pythia",
+    color: "#E6EAEA"
   }
 
 
@@ -355,6 +364,24 @@ const SUBMISSIONS: Array<LinkFilters> = [
     name: "ASPIRE HSEF 2024",
     color: "#D452FF",
     link: null,
+  },
+  {
+    id: 19,
+    name: "TAMP @ ICRA 2025",
+    color: "#03A6F7",
+    link: null,
+  },
+  {
+    id: 20,
+    name: "ICLR 2027",
+    color: "#FF6B4A",
+    link: null,
+  },
+  {
+    id: 21,
+    name: "CogSci Journal",
+    color: "#5B8DEF",
+    link: null,
   }
 
 ];
@@ -388,89 +415,103 @@ const RESEARCH_DETAILS:  Array<ResearchDetails> = [
    {
     icon_path: "media/skill_wrapper.png",
     alt_name: "Skill Wrapper",
+    aside_path: "media/skillwrapper_franka.gif",
+    aside_alt: "Franka robot executing learned manipulation skills",
     name: "Skill Wrapper: Skill Abstraction Using Foundation Models",
-    catchphrase: "Co-First Author | LEAP @ CoRL 2024",
-    description: "Try a picking up a box, observe when it works, learn!",
-    github_link: "https://github.com",
-    submission_links: [SUBMISSIONS[17], SUBMISSIONS[15]],
+    catchphrase: "Co-First Author | Best Poster in TAMP @ ICRA 2025",
+    description: "TL;DR: collect multiple examples of a robot skill execution (e.g. pick up box), group all that succeed the skill, learn the symbolic conditions needed to pick up a box",
+    github_link: "https://github.com/YzyLmc/skill_wrapper",
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[17]), "https://openreview.net/forum?id=5z8AJP5G8c"), updateLink(deepCopy(SUBMISSIONS[19]), "https://openreview.net/forum?id=y3BfO5KNvu"), SUBMISSIONS[20], updateLink(deepCopy(SUBMISSIONS[11]), "https://yzylmc.github.io/skill-wrapper/")],
     topics_and_libraries: [TOPICS_LIBRARIES[3], TOPICS_LIBRARIES[4], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14],TOPICS_LIBRARIES[33],TOPICS_LIBRARIES[34],TOPICS_LIBRARIES[35],TOPICS_LIBRARIES[36], TOPICS_LIBRARIES[37], TOPICS_LIBRARIES[31]]
   },
   {
     icon_path: "media/disentangled_rep_icon.png",
     alt_name:"Disentangled Representations",
     name: "Learning Disentangled Representations for RL using Self-Supervised Learning",
-    catchphrase: "First-Author | prepared for ICML 2025 ",
-    description: "SSL for smarter and faster RL",
+    catchphrase: "1st Author",
+    description: "TL;DR: automatically and efficiently separate the features that are important for decision making within encoded embeddings",
     github_link: "https://www.github.com",
-    submission_links:[SUBMISSIONS[0],SUBMISSIONS[16]],
+    submission_links:[SUBMISSIONS[0], SUBMISSIONS[20]],
     topics_and_libraries:[TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[11], TOPICS_LIBRARIES[23], TOPICS_LIBRARIES[31]]
-  },
-  {
-    icon_path: "media/state_tracking_cups.png",
-    alt_name: "LLM State Tracking",
-    name: "LLM Interpretability for State Tracking",
-    catchphrase: "Co-Author",
-    description: "Benchmarked LLM state-tracking across 3 logic tasks and 1000+ counterfactual prompt pairs, then used residual-stream and attention-head patching to find consistent circuits in 8 GPT and Pythia models from 8M to 1.5B.",
-    github_link: "https://github.com/Shreyas-S-Raman/CS2222-LLM-State-Dynamics",
-    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]), "https://arxiv.org/abs/2505.14892")],
-    topics_and_libraries: [TOPICS_LIBRARIES[18], TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[41]]
-  },
-  {
-    icon_path: "media/lanmp.png",
-    alt_name: "LaNMP Dataset",
-    name: "LaNMP: A Language-Conditioned Mobile Manipulation Benchmark for Autonomous Robots",
-    catchphrase: "Co-Author | LangRob @ CoRL 2024, prepared for RAL 2024",
-    description: "Let's integrate vision, audio, LIDAR, language feedback for behavior cloning and see what happens!",
-    github_link: "https://github.com/h2r/LaNPM-Dataset",
-    submission_links: [updateLink(deepCopy(SUBMISSIONS[11]), 'https://lanmpdataset.github.io/'), SUBMISSIONS[14]],
-    topics_and_libraries: [TOPICS_LIBRARIES[3], TOPICS_LIBRARIES[4], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14], TOPICS_LIBRARIES[37],TOPICS_LIBRARIES[38], TOPICS_LIBRARIES[39]]
-  },
-  {
-    icon_path: "media/dog_icon.png",
-    alt_name:"Dog Vision",
-    name: "Categorizing the Visual Environment and Analyzing the Visual Attention of Dogs",
-    catchphrase: "Co-Author | Karen T. Romer Undergraduate Teaching and Research Award | CV4Smalls @ WACV 2024 (First Author) & Animal Behavior (Co-Author)",
-    description: "Seeing objects through a dog's eyes. Where does their attention go?",
-    github_link: "https://github.com/Shreyas-S-Raman/dogvision-eyefixations",
-    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]), 'https://arxiv.org/abs/2311.11988'), SUBMISSIONS[5], SUBMISSIONS[6]],
-    topics_and_libraries: [TOPICS_LIBRARIES[0],TOPICS_LIBRARIES[1],TOPICS_LIBRARIES[2], TOPICS_LIBRARIES[10], TOPICS_LIBRARIES[12], TOPICS_LIBRARIES[15], TOPICS_LIBRARIES[19]]
   },
   {
     icon_path: "media/cape_icon.png",
     alt_name: "CAPE",
+    aside_path: "media/cape.gif",
+    aside_alt: "CAPE robot recovering from a failed action",
     name: "CAPE: Corrective Actions from Precondition Errors using Large Language Models",
-    catchphrase: "First Author | LangRob @ CoRL 2023, ICRA 2024 | Honors Thesis",
-    description: "LLM Planner + PDDL with Explicit Language Feedback",
+    catchphrase: "1st Author | 250+ citations | Honors Thesis",
+    description: "TL;DR: Use LLMs to self-correct a robot's unstructured plan generation and language embeddings to ground free-form LLM output into an existing skill the robot has",
     github_link: "https://github.com/Shreyas-S-Raman/corrective_actions_precondition_errors",
-    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]),"https://arxiv.org/abs/2211.09935"),updateLink(deepCopy(SUBMISSIONS[3]), 'https://openreview.net/forum?id=LW2YwzqKKP&nesting=2&sort=date-desc'), SUBMISSIONS[2], updateLink(deepCopy(SUBMISSIONS[4]), 'https://openreview.net/forum?id=cMDMRBe1TKs'), updateLink(deepCopy(SUBMISSIONS[11]),'https://shreyas-s-raman.github.io/CAPE/')],
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[2]), "https://ieeexplore.ieee.org/abstract/document/10611376"), updateLink(deepCopy(SUBMISSIONS[3]), 'https://openreview.net/forum?id=LW2YwzqKKP&nesting=2&sort=date-desc'), updateLink(deepCopy(SUBMISSIONS[4]), 'https://openreview.net/forum?id=cMDMRBe1TKs'), updateLink(deepCopy(SUBMISSIONS[0]),"https://arxiv.org/abs/2211.09935"), updateLink(deepCopy(SUBMISSIONS[11]),'https://shreyas-s-raman.github.io/CAPE/')],
     topics_and_libraries: [TOPICS_LIBRARIES[3], TOPICS_LIBRARIES[4], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14], TOPICS_LIBRARIES[16], TOPICS_LIBRARIES[18], TOPICS_LIBRARIES[21], TOPICS_LIBRARIES[26], TOPICS_LIBRARIES[30], TOPICS_LIBRARIES[32]]
   },
   {
     icon_path: "media/safety_chip_icon.png",
     alt_name: "safety_chip_icon",
+    aside_path: "media/safety_chip.gif",
+    aside_alt: "Safety Chip robot comparison from 1:05 to 1:42",
     name: "Plug in The Safety Chip: Enforcing Constraints for LLM-driven Robot Agents",
-    catchphrase: "Co-Author | LangRob @ CoRL, ICRA 2024",
-    description: "Safety First! For when I want my robot to obey any LTL-specified behavior constraints I give them atop my PDDL planners",
+    catchphrase: "Co-Author | 150+ citations",
+    description: "TL;DR: represent open-ended language constraints as more strictly enforcable LTL-automata using a finetuned LLM",
     github_link: "https://github.com/YzyLmc/ltl_safety",
-    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]),'https://arxiv.org/abs/2309.09919'), updateLink(deepCopy(SUBMISSIONS[3]), 'https://openreview.net/forum?id=INvxF4iQ34&nesting=2&sort=date-desc'), SUBMISSIONS[2], updateLink(deepCopy(SUBMISSIONS[11]), 'https://yzylmc.github.io/safety-chip/')],
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[2]), "https://ieeexplore.ieee.org/abstract/document/10611447"), updateLink(deepCopy(SUBMISSIONS[3]), 'https://openreview.net/forum?id=INvxF4iQ34&nesting=2&sort=date-desc'), updateLink(deepCopy(SUBMISSIONS[0]),'https://arxiv.org/abs/2309.09919'), updateLink(deepCopy(SUBMISSIONS[11]), 'https://yzylmc.github.io/safety-chip/')],
     topics_and_libraries: [TOPICS_LIBRARIES[3], TOPICS_LIBRARIES[4], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14], TOPICS_LIBRARIES[16], TOPICS_LIBRARIES[18], TOPICS_LIBRARIES[21], TOPICS_LIBRARIES[22], TOPICS_LIBRARIES[26], TOPICS_LIBRARIES[30]]
   },
   {
     icon_path: "media/tiered_learning_icon.png",
     alt_name: "Tiered Rewards",
+    aside_path: "media/tiered_doorkey.gif",
+    aside_alt: "Agent solving the 8x8 MiniGrid DoorKey task",
     name: "Tiered Reward Functions: Specifying and Fast Learning of Desired Behavior",
     catchphrase: "Co-Author | RLC 2024",
-    description: "Who doesn’t love getting dense rewards for incrementally better behavior?",
+    description: "TL;DR: a reward structure that is task-independent and guarantees the agent optimally visits the goal relative to obstacle collisions",
     github_link: "https://github.com/zhouzypaul/tiered-reward",
-    submission_links: [SUBMISSIONS[0], SUBMISSIONS[12], updateLink(deepCopy(SUBMISSIONS[11]), 'https://zhouzypaul.github.io/tiered_reward/')],
+    submission_links: [SUBMISSIONS[0], updateLink(deepCopy(SUBMISSIONS[12]), 'https://rlj.cs.umass.edu/2024/papers/Paper159.html'), updateLink(deepCopy(SUBMISSIONS[11]), 'https://zhouzypaul.github.io/tiered_reward/')],
     topics_and_libraries: [TOPICS_LIBRARIES[11],TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[25]]
+  },
+  {
+    icon_path: "media/state_tracking_cups.png",
+    alt_name: "LLM State Tracking",
+    icon_drop: 8,
+    aside_path: "media/state_tracking_patching.png",
+    aside_alt: "Activation patching for box tracking",
+    name: "LLM Interpretability for State Tracking",
+    catchphrase: "Co-Author",
+    description: "TL;DR: turns out LLMs (GPT/Pythia) have specific heads to track state changes in text-like environments",
+    github_link: "https://github.com/Shreyas-S-Raman/CS2222-LLM-State-Dynamics",
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]), "https://arxiv.org/abs/2505.14892")],
+    topics_and_libraries: [TOPICS_LIBRARIES[18], TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[41], TOPICS_LIBRARIES[42], TOPICS_LIBRARIES[33]]
+  },
+  {
+    icon_path: "media/lanmp.png",
+    alt_name: "LaNMP Dataset",
+    icon_scale: 1.15,
+    name: "LaNMP: A Language-Conditioned Mobile Manipulation Benchmark for Autonomous Robots",
+    catchphrase: "Co-Author | LangRob @ CoRL 2024, prepared for RAL 2024",
+    description: "Let's integrate vision, audio, LIDAR, language feedback for behavior cloning and see what happens!",
+    github_link: "https://github.com/h2r/LaNPM-Dataset",
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[11]), 'https://lanmpdataset.github.io/'), updateLink(deepCopy(SUBMISSIONS[14]), 'https://openreview.net/forum?id=Wjav6O4U3g')],
+    topics_and_libraries: [TOPICS_LIBRARIES[3], TOPICS_LIBRARIES[4], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14], TOPICS_LIBRARIES[37],TOPICS_LIBRARIES[38], TOPICS_LIBRARIES[39]]
+  },
+  {
+    icon_path: "media/dog_icon.png",
+    alt_name:"Dog Vision",
+    aside_path: "media/dog_vision_figure.png",
+    aside_alt: "Dog-view scene and semantic segmentation",
+    name: "Categorizing the Visual Environment and Analyzing the Visual Attention of Dogs",
+    catchphrase: "Co-Author | Karen T. Romer UTRA | CV4Smalls @ WACV 2024",
+    description: "TL;DR: predict where dogs will look from live video stream in their POV",
+    github_link: "https://github.com/Shreyas-S-Raman/dogvision-eyefixations",
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]), 'https://arxiv.org/abs/2311.11988'), SUBMISSIONS[5], updateLink(deepCopy(SUBMISSIONS[21]), 'https://onlinelibrary.wiley.com/doi/10.1111/cogs.70080')],
+    topics_and_libraries: [TOPICS_LIBRARIES[0],TOPICS_LIBRARIES[1],TOPICS_LIBRARIES[2], TOPICS_LIBRARIES[10], TOPICS_LIBRARIES[12], TOPICS_LIBRARIES[15], TOPICS_LIBRARIES[19]]
   },
   {
     icon_path: "media/eeg_icon.png",
     alt_name: "Cardiac Arrest",
     name: "Development of a CNN for GPD Classification in Cardiac Arrest Patients",
-    catchphrase: "Acknowledgement | Brown University Archive",
-    description: "Let's predict onset of cardiac arrest before they happen!",
+    catchphrase: "Acknowledgement",
+    description: "TL;DR: we can predict early onset of strokes from EEG data",
     github_link: "https://github.com/syphongha/eeg_research_code_main",
     submission_links: [SUBMISSIONS[8]],
     topics_and_libraries: [TOPICS_LIBRARIES[2], TOPICS_LIBRARIES[7], TOPICS_LIBRARIES[27], TOPICS_LIBRARIES[28]]
@@ -480,7 +521,7 @@ const RESEARCH_DETAILS:  Array<ResearchDetails> = [
     alt_name: "Hierarchical Planning",
     name: "You Knew What I Meant: Improving HRC of Hierarchical Planning through LLMs",
     catchphrase: "Co-Author | ASPIRE HSEF 2024",
-    description: "Prompting can make the world of a difference for LLM Planners",
+    description: "TL;DR: the structure used in prompting LLM planners makes a tremendous difference in planning performance",
     github_link: "https://www.github.com",
     submission_links: [updateLink(deepCopy(SUBMISSIONS[18]), 'https://hfesam2024.conference-program.com/presentation/?id=POS259&sess=sess108')],
     topics_and_libraries: [TOPICS_LIBRARIES[18],TOPICS_LIBRARIES[21], TOPICS_LIBRARIES[26], TOPICS_LIBRARIES[29], TOPICS_LIBRARIES[30], TOPICS_LIBRARIES[32]]
@@ -500,9 +541,11 @@ const RESEARCH_DETAILS:  Array<ResearchDetails> = [
   {
     icon_path: "media/recap_icon.png",
     alt_name: "ReCap",
+    aside_path: "media/recap_figure.jpg",
+    aside_alt: "Flickr photo and three reconstructed images from the caption",
     name: "RECAP: Reconstructing Images for Caption Evaluation",
-    catchphrase: "Co-Author | Brown University Archive",
-    description: "Captions are langauge abstractions of images. Let's evaluate them by reconstructing images",
+    catchphrase: "Co-Author",
+    description: "TL;DR: evaluating image captions by reconstructing images from them makes the captions more image-specific",
     github_link: "https://github.com/anc2001/recap",
     submission_links: [updateLink(deepCopy(SUBMISSIONS[8]), "https://cs.brown.edu/media/filer_public/1f/75/1f75f7f7-836d-4baa-83c6-6d4c14dc71ca/changadrian_feuchtsheridan_ramanshreyas_sundara.pdf")],
     topics_and_libraries:[TOPICS_LIBRARIES[12], TOPICS_LIBRARIES[13], TOPICS_LIBRARIES[14], TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[31]]
@@ -559,7 +602,7 @@ const Projects = () => (
 
     {Array.from(RESEARCH_DETAILS.keys()).map((val, index) => (
       
-      <ResearchBox key={index} submission_links={RESEARCH_DETAILS[val].submission_links} icon={RESEARCH_DETAILS[val].icon_path} alt_icon_name = {RESEARCH_DETAILS[val].alt_name} github_link = {RESEARCH_DETAILS[val].github_link} name = {RESEARCH_DETAILS[val].name} catchphrase = {RESEARCH_DETAILS[val].catchphrase} description = {RESEARCH_DETAILS[val].description} filters = {RESEARCH_DETAILS[val].topics_and_libraries}/>
+      <ResearchBox key={index} submission_links={RESEARCH_DETAILS[val].submission_links} icon={RESEARCH_DETAILS[val].icon_path} alt_icon_name = {RESEARCH_DETAILS[val].alt_name} github_link = {RESEARCH_DETAILS[val].github_link} name = {RESEARCH_DETAILS[val].name} catchphrase = {RESEARCH_DETAILS[val].catchphrase} description = {RESEARCH_DETAILS[val].description} filters = {RESEARCH_DETAILS[val].topics_and_libraries} aside={RESEARCH_DETAILS[val].aside_path} aside_alt={RESEARCH_DETAILS[val].aside_alt} icon_drop={RESEARCH_DETAILS[val].icon_drop} icon_scale={RESEARCH_DETAILS[val].icon_scale}/>
     ))}
 
     <h2 className={styles.projectsTitle}>Reviewed for</h2>
