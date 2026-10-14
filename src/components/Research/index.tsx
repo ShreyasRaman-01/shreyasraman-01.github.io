@@ -497,6 +497,47 @@ const RESEARCH_DETAILS:  Array<ResearchDetails> = [
 
 
 
+interface ReviewedVenue {
+  name: string;
+  href?: string;
+  icon: string;
+  caption?: string;
+}
+
+const REVIEWED_FOR: Array<ReviewedVenue> = [
+  {
+    name: "CoRL 2026",
+    caption: "2026",
+    icon: "media/corl2026_icon.png",
+  },
+  {
+    name: "RLC 2026",
+    caption: "2026",
+    icon: "media/rlc_icon.png",
+  },
+  {
+    name: "CoRL 2025",
+    caption: "2025",
+    icon: "media/corl2025_icon.png",
+  },
+  {
+    name: "RLC 2025",
+    caption: "2025",
+    icon: "media/rlc_icon.png",
+  },
+  {
+    name: "LEAP @ CoRL 2024",
+    caption: "LEAP @ CoRL 2024",
+    href: "https://leap-workshop.github.io/",
+    icon: "media/corl2024_icon.png",
+  },
+  {
+    name: "ICRA 2024",
+    href: "https://2024.ieee-icra.org/",
+    icon: "media/icra2024_icon.png",
+  },
+];
+
 const Projects = () => (
   <div className={styles.container}>
     <h2 className={styles.projectsTitle}>Publications</h2>
@@ -506,6 +547,26 @@ const Projects = () => (
       <ResearchBox key={index} submission_links={RESEARCH_DETAILS[val].submission_links} icon={RESEARCH_DETAILS[val].icon_path} alt_icon_name = {RESEARCH_DETAILS[val].alt_name} github_link = {RESEARCH_DETAILS[val].github_link} name = {RESEARCH_DETAILS[val].name} catchphrase = {RESEARCH_DETAILS[val].catchphrase} description = {RESEARCH_DETAILS[val].description} filters = {RESEARCH_DETAILS[val].topics_and_libraries}/>
     ))}
 
+    <h2 className={styles.projectsTitle}>Reviewed for</h2>
+    <div className={styles.reviewGrid}>
+      {REVIEWED_FOR.map((venue) => {
+        const content = (
+          <>
+            <img src={venue.icon} alt={venue.name} />
+            {venue.caption && <span className={styles.reviewName}>{venue.caption}</span>}
+          </>
+        );
+        return venue.href ? (
+          <a key={venue.name} className={styles.reviewCard} href={venue.href} target="_blank" rel="noreferrer">
+            {content}
+          </a>
+        ) : (
+          <div key={venue.name} className={styles.reviewCard}>
+            {content}
+          </div>
+        );
+      })}
+    </div>
 
   </div>
 );
