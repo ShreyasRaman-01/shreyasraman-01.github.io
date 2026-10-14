@@ -8,8 +8,6 @@ html {
 *:before,
 *:after {
   box-sizing: inherit;
-  backface-visibility: hidden;
-  -webkit-backface-visibility: hidden;
 }
 
 html,

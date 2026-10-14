@@ -147,9 +147,7 @@ p {
   background-color: transparent;
   width: 300px;
   height: 450px;
-  -webkit-perspective: 1000;
-  -moz-perspective: 1000;
-  perspective: 1000;
+  perspective: 1000px;
   position: absolute;
   bottom: 0;
   right: 6%;
@@ -172,10 +170,7 @@ p {
 
 
 .shreyas-card:hover .shreyas-card-inner {
-  -webkit-transform: perspective(600px) rotateY(180deg);
-  -moz-transform:  perspective(600px) rotateY(180deg);
-  transform: perspective(600px) rotateY(180deg); 
-
+  transform: rotateY(180deg);
 }
 
 .shreyas-card-front,
@@ -183,9 +178,11 @@ p {
   position: absolute;
   width: 100%;
   height: 100%;
-  -webkit-backface-visibility: hidden;
-  -moz-backface-visibility: hidden;
   backface-visibility: hidden;
+}
+
+.shreyas-card-front {
+  transform: rotateY(0deg);
 }
 
 .shreyas-card-back {
