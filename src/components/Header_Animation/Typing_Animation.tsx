@@ -9,7 +9,7 @@ const TypeAnimation = () => {
     <div className="typing-animation">
       <div className="typing-text">
         <div className="static-text">
-          I am &nbsp;
+          I am&nbsp;
           <Typewriter
             options={{
               autoStart: true,

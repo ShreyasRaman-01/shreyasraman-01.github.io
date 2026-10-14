@@ -228,6 +228,11 @@ const TOPICS_LIBRARIES: Array<Filters> = [
     id: 31,
     name: "Contrastive Learning",
     color: "#E6EAEA"
+  },
+  {
+    id: 40,
+    name: "TransformerLens",
+    color: "#E6EAEA"
   }
 
 
@@ -399,6 +404,16 @@ const RESEARCH_DETAILS:  Array<ResearchDetails> = [
     github_link: "https://www.github.com",
     submission_links:[SUBMISSIONS[0],SUBMISSIONS[16]],
     topics_and_libraries:[TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[11], TOPICS_LIBRARIES[23], TOPICS_LIBRARIES[31]]
+  },
+  {
+    icon_path: "media/state_tracking_cups.png",
+    alt_name: "LLM State Tracking",
+    name: "LLM Interpretability for State Tracking",
+    catchphrase: "Co-Author",
+    description: "Benchmarked LLM state-tracking across 3 logic tasks and 1000+ counterfactual prompt pairs, then used residual-stream and attention-head patching to find consistent circuits in 8 GPT and Pythia models from 8M to 1.5B.",
+    github_link: "https://github.com/Shreyas-S-Raman/CS2222-LLM-State-Dynamics",
+    submission_links: [updateLink(deepCopy(SUBMISSIONS[0]), "https://arxiv.org/abs/2505.14892")],
+    topics_and_libraries: [TOPICS_LIBRARIES[18], TOPICS_LIBRARIES[24], TOPICS_LIBRARIES[41]]
   },
   {
     icon_path: "media/lanmp.png",
