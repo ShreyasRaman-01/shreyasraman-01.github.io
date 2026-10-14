@@ -13,7 +13,11 @@
   -webkit-mask: var(--gear) center / contain no-repeat;
   mask: var(--gear) center / contain no-repeat;
   animation: gear-spin linear both;
-  animation-timeline: view();
+  /* The production minifier sorts `animation` after `animation-timeline`.
+     The shorthand then resets the timeline, so the gears never spin.
+     !important keeps the scroll timeline attached after that reorder. */
+  animation-timeline: view() !important;
+  animation-range: cover 0% cover 100% !important;
 }
 
 .about-card-container::before {
