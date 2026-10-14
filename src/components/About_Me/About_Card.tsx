@@ -30,7 +30,7 @@ class AboutCard extends Component {
       </li>
       <li>
         {" "}
-        I am a Software Engineer (ML) at <a href="https://www.nuro.ai/nuro-lucid-uber-robotaxi" Nuro></a> working on learning useful representations for End-to-End Autonomous Driving
+        I am a Software Engineer (ML) at <a href="https://www.nuro.ai/nuro-lucid-uber-robotaxi" style={{color:"black", textDecoration:"none"}}>Nuro</a> working on learning useful representations for End-to-End Autonomous Driving
         {" "}
       </li>
       <li>
@@ -40,7 +40,7 @@ class AboutCard extends Component {
       </li>
       <li>
         {" "}
-        I am obsessed with the problem of <b>learning composable abstractions for effective/general embodied decision making</b> from <b>multimodal observations</b> (vision, audio, language, haptic etc...). To hear more about my thoughts on this problem, checkout my <a href="https://medium.com/@shreyas_sundara_raman" blog post> </a>{" "}
+        I am obsessed with the problem of <b>learning composable abstractions for effective/general embodied decision making</b> from <b>multimodal observations</b> (vision, audio, language, haptic etc...). To hear more about my thoughts on this problem, checkout my <a href="https://medium.com/@shreyas_sundara_raman" style={{color:"black", textDecoration:"none"}}>blog post</a>{" "}
       </li>
       <li>
         {" "}
