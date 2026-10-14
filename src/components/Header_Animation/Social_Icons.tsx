@@ -11,6 +11,6 @@ export const SOCIAL_ICONS: {
   { name:"facebook",icon_pic: "fa-brands fa-x-twitter", url: "https://twitter.com/raman_shreyas", cName: "social-icon" },
   {name: "scholar", icon_pic: "fa-brands fa-google-scholar", url: "https://scholar.google.com/citations?user=F--ov6gAAAAJ&hl=en&authuser=1", cName: "social-icon" },
   { name:"email",icon_pic: "far fa-envelope", url: "shreyas_sundara_raman@brown.edu", cName: "social-icon" },
-  { name:"resume",icon_pic: "far fa-clipboard", url: "../data/Shreyas_Raman_Resume_2025.pdf", cName: "social-icon"},
+  { name:"resume",icon_pic: "far fa-clipboard", url: "../data/Shreyas_Raman_Resume.pdf", cName: "social-icon"},
 ];
 
