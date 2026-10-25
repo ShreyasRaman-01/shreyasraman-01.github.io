@@ -564,6 +564,16 @@ interface ReviewedVenue {
 
 const REVIEWED_FOR: Array<ReviewedVenue> = [
   {
+    name: "ICRA 2027",
+    href: "https://2027.ieee-icra.org/",
+    icon: "media/icra2027_icon.png",
+  },
+  {
+    name: "LEAP @ CoRL 2026",
+    caption: "LEAP @ CoRL 2026",
+    icon: "media/corl2026_icon.png",
+  },
+  {
     name: "CoRL 2026",
     caption: "2026",
     icon: "media/corl2026_icon.png",
@@ -572,11 +582,6 @@ const REVIEWED_FOR: Array<ReviewedVenue> = [
     name: "RLC 2026",
     caption: "2026",
     icon: "media/rlc_icon.png",
-  },
-  {
-    name: "CoRL 2025",
-    caption: "2025",
-    icon: "media/corl2025_icon.png",
   },
   {
     name: "RLC 2025",
@@ -593,6 +598,11 @@ const REVIEWED_FOR: Array<ReviewedVenue> = [
     name: "ICRA 2024",
     href: "https://2024.ieee-icra.org/",
     icon: "media/icra2024_icon.png",
+  },
+  {
+    name: "CoRL 2025",
+    caption: "2025",
+    icon: "media/corl2025_icon.png",
   },
 ];
 
